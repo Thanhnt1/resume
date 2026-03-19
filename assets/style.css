@@ -1,1 +1,125 @@
-/* CSS content previously provided */
+:root{
+  --bg:#0b1020;
+  --panel:#111a33;
+  --text:#e7ecff;
+  --muted:#a9b4e6;
+  --line:rgba(255,255,255,.12);
+  --brand:#6ea8fe;
+  --brand2:#9b7bff;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius:16px;
+  --max:1100px;
+}
+
+:root[data-theme="light"]{
+  --bg:#f7f8fb;
+  --panel:#ffffff;
+  --text:#121826;
+  --muted:#4b5565;
+  --line:rgba(18,24,38,.12);
+  --brand:#2563eb;
+  --brand2:#7c3aed;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(110,168,254,.25), transparent 50%),
+              radial-gradient(900px 500px at 80% 10%, rgba(155,123,255,.22), transparent 55%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.55;
+}
+
+a{color:inherit}
+.container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+.skip{position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden}
+.skip:focus{left:18px; top:18px; width:auto; height:auto; padding:10px 12px; background:var(--panel); border:1px solid var(--line); border-radius:10px; z-index:50}
+
+.topbar{
+  position:sticky; top:0; z-index:40;
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  border-bottom:1px solid var(--line);
+}
+.topbar__inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 18px}
+.brand__name{font-size:18px; font-weight:700}
+.brand__title{font-size:13px; color:var(--muted); margin-top:2px}
+.actions{display:flex; gap:10px; align-items:center}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 75%, transparent);
+  color:var(--text);
+  text-decoration:none;
+  cursor:pointer;
+  box-shadow:none;
+}
+.btn:hover{transform: translateY(-1px)}
+.btn--primary{
+  border-color: color-mix(in srgb, var(--brand) 55%, var(--line));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--brand) 65%, var(--panel)), color-mix(in srgb, var(--brand2) 55%, var(--panel)));
+}
+
+.layout{display:grid; grid-template-columns: 320px 1fr; gap:18px; padding:22px 18px 36px}
+
+.card{
+  background: var(--panel);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: var(--shadow);
+}
+.card__title{margin:0 0 10px; font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
+
+.list{list-style:none; padding:0; margin:0; display:grid; gap:10px}
+.k{display:inline-block; min-width:82px; color:var(--muted)}
+
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{font-size:12px; padding:8px 10px; border-radius:999px; border:1px solid var(--line); background: color-mix(in srgb, var(--panel) 86%, transparent)}
+
+.content{display:grid; gap:18px}
+.hero, .section{
+  background: var(--panel);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding:18px;
+  box-shadow: var(--shadow);
+}
+.hero h1{margin:0 0 8px; font-size:18px}
+.hero p{margin:0; color: color-mix(in srgb, var(--text) 92%, var(--muted))}
+
+.section__head{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; border-bottom:1px solid var(--line); padding-bottom:10px; margin-bottom:12px}
+.section__head h2{margin:0; font-size:16px}
+.muted{color:var(--muted); font-size:13px}
+
+.timeline{display:grid; gap:14px}
+.item{border:1px solid var(--line); border-radius:14px; padding:14px; background: color-mix(in srgb, var(--panel) 86%, transparent)}
+.item__meta{display:grid; gap:2px; margin-bottom:10px}
+.item__title{font-weight:700}
+.item__sub{color:var(--muted); font-size:13px}
+.item__time{color:var(--muted); font-size:12px}
+
+.bullets{margin:0; padding-left:18px; display:grid; gap:6px}
+.tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+.tag{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--line)}
+
+.footer{padding:6px 2px}
+
+@media print{
+  .topbar, .skip, #toggleTheme, #downloadPdf{display:none !important}
+  body{background:#fff}
+  .layout{grid-template-columns: 280px 1fr; padding-top:0}
+  .card, .hero, .section, .item{box-shadow:none}
+}
+
+@media (max-width: 900px){
+  .layout{grid-template-columns: 1fr;}
+}
