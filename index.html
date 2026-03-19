@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Resume / CV - Thanh" />
+  <title>Resume | Thanh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__name" id="name">Thanh Nguyen</div>
+        <div class="brand__title" id="title">Software Engineer</div>
+      </div>
+      <nav class="actions">
+        <button class="btn" id="toggleTheme" type="button" aria-label="Toggle theme">Theme</button>
+        <a class="btn btn--primary" href="#" id="downloadPdf" role="button">Print / PDF</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container layout">
+    <aside class="sidebar">
+      <section class="card">
+        <h2 class="card__title">Contact</h2>
+        <ul class="list" id="contact">
+          <li><span class="k">Email</span> <a href="mailto:your@email.com">your@email.com</a></li>
+          <li><span class="k">GitHub</span> <a href="https://github.com/Thanhnt1" target="_blank" rel="noreferrer">github.com/Thanhnt1</a></li>
+          <li><span class="k">LinkedIn</span> <a href="#" target="_blank" rel="noreferrer">linkedin.com/in/your-handle</a></li>
+          <li><span class="k">Location</span> Vietnam</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title">Skills</h2>
+        <div class="chips" id="skills">
+          <span class="chip">JavaScript / TypeScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Git / CI</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title">Languages</h2>
+        <ul class="list">
+          <li><span class="k">Vietnamese</span> Native</li>
+          <li><span class="k">English</span> Professional</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title">Links</h2>
+        <ul class="list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <section class="content">
+      <section class="hero">
+        <h1>Summary</h1>
+        <p>
+          Full‑stack software engineer focused on building reliable web apps. I enjoy clean architecture,
+          performance, and shipping features that users love.
+        </p>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section__head">
+          <h2>Projects</h2>
+          <p class="muted">Selected work (replace with your real projects).</p>
+        </div>
+        <div class="timeline">
+          <article class="item">
+            <div class="item__meta">
+              <div class="item__title">Project A — SaaS Dashboard</div>
+              <div class="item__sub">React, Node.js, PostgreSQL</div>
+              <div class="item__time">2025</div>
+            </div>
+            <ul class="bullets">
+              <li>Built responsive UI and data visualization for KPIs.</li>
+              <li>Designed REST API and optimized queries (cut page load ~40%).</li>
+              <li>Added CI checks and improved release reliability.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Frontend</span><span class="tag">Backend</span><span class="tag">Performance</span>
+            </div>
+          </article>
+
+          <article class="item">
+            <div class="item__meta">
+              <div class="item__title">Project B — Internal Tools</div>
+              <div class="item__sub">TypeScript, Express, SQLite</div>
+              <div class="item__time">2024</div>
+            </div>
+            <ul class="bullets">
+              <li>Automated repetitive workflows, saving team hours weekly.</li>
+              <li>Implemented authentication, roles, and audit logs.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Automation</span><span class="tag">Security</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section__head">
+          <h2>Experience</h2>
+          <p class="muted">Replace placeholders with your actual job history.</p>
+        </div>
+        <div class="timeline">
+          <article class="item">
+            <div class="item__meta">
+              <div class="item__title">Software Engineer — Company Name</div>
+              <div class="item__sub">Full‑time · Remote/On‑site</div>
+              <div class="item__time">2023 — Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Delivered features end‑to‑end: design → implementation → monitoring.</li>
+              <li>Collaborated with product/design to refine requirements and UX.</li>
+              <li>Improved stability with tests and better error handling.</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item__meta">
+              <div class="item__title">Intern — Company Name</div>
+              <div class="item__sub">Internship</div>
+              <div class="item__time">2022</div>
+            </div>
+            <ul class="bullets">
+              <li>Built small features and fixed bugs under mentorship.</li>
+              <li>Learned Git flow, code review practices, and basic CI.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section__head">
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+          <article class="item">
+            <div class="item__meta">
+              <div class="item__title">University / College Name</div>
+              <div class="item__sub">B.S. in Computer Science (or similar)</div>
+              <div class="item__time">2019 — 2023</div>
+            </div>
+            <ul class="bullets">
+              <li>Relevant: Data Structures, Databases, Web Development.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="muted">Last updated: <span id="lastUpdated"></span></div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
