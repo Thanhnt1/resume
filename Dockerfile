@@ -4,14 +4,14 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Copy package files
-COPY package.json pnpm-lock.yaml* package-lock.json* ./
+COPY package.json package-lock.json* ./
 
 # Install dependencies
-RUN npm install -g pnpm && pnpm install --frozen-lockfile
+RUN npm install
 
 # Copy source và build
 COPY . .
-RUN pnpm build
+RUN npm run build
 
 # Stage 2: Serve với nginx
 FROM nginx:alpine
